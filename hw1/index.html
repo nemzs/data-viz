@@ -8,18 +8,20 @@
         function test(){
             let isHappy = document.getElementById('status').checked;
             let path = document.getElementById('path');
+            let label = document.getElementById('label');
             if(isHappy){
-                path.setAttribute('d', 'M 150 200 Q 225 300 300 200')
-
+                path.setAttribute('d', 'M 150 200 Q 225 300 300 200');
+                label.innerHTML = "Happy";
             } else{
-                path.setAttribute('d', 'm 180 240 c 47 -82 82 -11 130 0')
+                path.setAttribute('d', 'm 180 240 c 47 -82 82 -11 130 0');
+                label.innerHTML = "Sad";
             }
         }
     </script>
 </head>
     <body>
     <input type="checkbox" id="status" name="status" value="Bike" onclick="test()" checked>
-    <label for="status">Happy</label><br>
+    <label for="status" id="label">Happy</label><br>
         <svg width="500" height="300">
             <g>
                <circle cx="250" cy="150" r="150" fill="yellow">
